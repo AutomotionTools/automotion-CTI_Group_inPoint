@@ -2,7 +2,7 @@
 // Author: Rob Barrett (Automotion)
 // Website: https://automotion.studio
 
-// Purpose: Set the inPoint to the earliest inPoint of a group of selected layers.
+// Description: Moves the active comp's CTI to the earliest inPoint of a group of selected layers.
 
 (function () {
 app.beginUndoGroup("CTI_Group_inPoint");
