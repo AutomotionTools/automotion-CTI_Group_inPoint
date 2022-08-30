@@ -6,6 +6,9 @@
 (function () {
 app.beginUndoGroup("CTI_Group_outPoint");
 
+    // Set this to false to set the CTI to the true outPoint of the selection, instead of the native behaviour of 1 frame back.
+    var nativeOutPoint = true;
+
     var comp = app.project.activeItem;
     var layers = comp.selectedLayers;
     var latestOutPoint = null;
@@ -15,6 +18,9 @@ app.beginUndoGroup("CTI_Group_outPoint");
         for (var i = 0; i < layers.length; i++) {
             if (layers[i].outPoint > latestOutPoint || latestOutPoint == null) {
                 latestOutPoint = layers[i].outPoint;
+                if (nativeOutPoint == true) {
+                    latestOutPoint -= comp.frameDuration;
+                }
             }
         };
 
