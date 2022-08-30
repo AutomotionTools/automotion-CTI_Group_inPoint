@@ -7,6 +7,8 @@ Moves the active comp's CTI to the earliest inPoint of a group of selected layer
 
 Moves the active comp's CTI to the latest outPoint of a group of selected layers.
 
+**Optional:** Change the 'nativeOutPoint' variable to 'false' to move the CTI to the true end of the selection. Set this to 'true' for the native behaviour, which moves the CTI to the end of the selection, minus 1 frame.
+
 
 ## Replace native keyboard shortcuts
 
